@@ -37,14 +37,15 @@ const handleClick = (movie) => {
     setTrailerUrl("");
   } else {
     // movies?.name || movies?.title || movies?.original_name
-    movieTrailer(movie?.name || movie?.title || movie?.original_title || movie?.original_name || "")
+    movieTrailer(movie?.name || movie?.title || movie?.original_name)
     .then((url) => {
       const urlParams = new URLSearchParams(new URL(url).search);
+      console.log(urlParams.get("v"));
       setTrailerUrl(urlParams.get("v"));
     }).catch(error => console.log(error))
   }
 };
-console.log(trailerUrl,"-> hello");
+// console.log(trailerUrl,"-> hello");
   return (
     <div className="row">
       <h1>{title}</h1>
