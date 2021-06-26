@@ -2,11 +2,13 @@ import React from "react";
 import requests from "./requests";
 import Row from "./Row";
 import Banner from "./Banner";
+import Nav from "./Nav";
 
 function HomePage() {
   return (
     <div>
         {/* Navbar. */}
+        <Nav />
         {/* for Header Banner. */}
         <Banner />
       {/* <Row title="Trending" fetchUrl="https://api.themoviedb.org/3/discover/tv?api_key=782f819e96e3592001258ed496d64dc5&with_networks=213"/> */}
